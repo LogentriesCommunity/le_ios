@@ -1,5 +1,4 @@
 
-
 Logentries logging for iOS
 ==========================
 
@@ -19,6 +18,8 @@ Installation
 
 Just add files from lelib group into your project.
 
+Need a token? Get a free account if you don't already have one.
+
 Simple example
 --------------
 
@@ -26,7 +27,7 @@ Simple example
 #import "lelib.h"
 
 LELog* log = [LELog sharedInstance];
-log.token = @"f66815d1-702c-414b-8dcc-bb73de372584";
+log.token = @"LOGENTRIES_TOKEN";
 
 [log log:@"Hello World"];
 ```
@@ -48,7 +49,7 @@ int main(int argc, char * argv[])
   @autoreleasepool {
 
     le_init();
-    le_set_token("aaabacad-aeaf-4321-1234-abcdef012345");
+    le_set_token("LOGENTRIES_TOKEN");
 
     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
   }
