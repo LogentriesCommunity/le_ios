@@ -15,8 +15,8 @@ int main(int argc, char * argv[])
 {
     @autoreleasepool {
         le_init();
-        le_set_token("f66815d1-702c-414b-8dcc-bb73de372584");
-        le_log("nazdar");
+        le_set_token("602c8391-2af5-47a1-8c8e-4c002e0eef3d");
+        le_log("Hello World"); // Change this
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
