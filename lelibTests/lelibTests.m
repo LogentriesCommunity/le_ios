@@ -3,7 +3,7 @@
 //  lelibTests
 //
 //  Created by Petr on 27.10.13.
-//  Copyright (c) 2013 JLizard. All rights reserved.
+//  Copyright (c) 2013,2014 Logentries. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

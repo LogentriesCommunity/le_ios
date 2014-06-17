@@ -321,7 +321,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = JLizard;
+				ORGANIZATIONNAME = Logentries;
 				TargetAttributes = {
 					4BB806AE181D3DF1003066E5 = {
 						TestTargetID = 4B08F54E18436F0F003D813B;

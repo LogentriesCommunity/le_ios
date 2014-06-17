@@ -3,7 +3,7 @@
 //  lelib
 //
 //  Created by Petr on 01.12.13.
-//  Copyright (c) 2013 JLizard. All rights reserved.
+//  Copyright (c) 2013,2014 Logentries. All rights reserved.
 //
 
 #import "LogFiles.h"

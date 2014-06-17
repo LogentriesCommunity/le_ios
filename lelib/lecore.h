@@ -3,7 +3,7 @@
 //  lelib
 //
 //  Created by Petr on 06.01.14.
-//  Copyright (c) 2014 JLizard. All rights reserved.
+//  Copyright (c) 2014 Logentries. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
