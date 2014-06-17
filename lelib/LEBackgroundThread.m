@@ -13,8 +13,12 @@
 #import "LeNetworkStatus.h"
 
 #define LOGENTRIES_HOST         @"data.logentries.com"
-#define LOGENTRIES_PORT         10000
 #define LOGENTRIES_USE_TLS      0
+#if LOGENTRIES_USE_TLS
+#define LOGENTRIES_PORT         443
+#else
+#define LOGENTRIES_PORT         80
+#endif
 
 #define RETRY_TIMEOUT           60.0
 #define KEEPALIVE_INTERVAL      3600.0
