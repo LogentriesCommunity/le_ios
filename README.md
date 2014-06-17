@@ -55,7 +55,7 @@ int main(int argc, char * argv[])
   }
 }
 
-The token is stored in global variable. You don't have to setup token property
+The token is stored in global variable. You do not have to setup token property
 of LELog instance later.
 
 ```
