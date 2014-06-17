@@ -375,11 +375,5 @@
     }
 }
 
-- (void)start
-{
-    self.initialized = [NSCondition new];
-    [super start];
-}
-
 
 @end

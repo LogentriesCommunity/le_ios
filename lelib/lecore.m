@@ -54,12 +54,12 @@ void le_poke()
 {
     if (!backgroundThread) {
         backgroundThread = [LEBackgroundThread new];
-        [backgroundThread start];
         
-        // if this is nil, initialization was already proceeded
-        NSCondition* initialized = backgroundThread.initialized;
+        NSCondition* initialized = [NSCondition new];
+        backgroundThread.initialized = initialized;
         
         [initialized lock];
+        [backgroundThread start];
         [initialized wait];
         [initialized unlock];
     }
