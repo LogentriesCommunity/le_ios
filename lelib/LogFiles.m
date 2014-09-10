@@ -125,7 +125,7 @@
 {
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSError* error = nil;
-    BOOL created = [fileManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:NO error:&error];
+    BOOL created = [fileManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:&error];
     
     if (!created) {
         LE_DEBUG(@"Can't create logentries directory '%@' with error %@", path, error);
