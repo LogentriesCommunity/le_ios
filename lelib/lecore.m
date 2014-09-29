@@ -24,6 +24,8 @@ static int file_order_number;
 
 static char buffer[MAXIMUM_LOGENTRY_SIZE];
 
+static void (*saved_le_exception_handler)(NSException *exception);
+
 /*
  Sets logfile_descriptor to -1 when fails, this means that all subsequent write attempts will fail
  return 0 on success
@@ -73,6 +75,10 @@ static void le_exception_handler(NSException *exception)
     LE_DEBUG(@"%@", message);
     message = [message stringByReplacingOccurrencesOfString:@"\n" withString:@"\u2028"];
     le_log([message cStringUsingEncoding:NSUTF8StringEncoding]);
+    
+    if (saved_le_exception_handler) {
+        saved_le_exception_handler(exception);
+    }
 }
 
 int le_init()
@@ -112,6 +118,7 @@ int le_init()
         
         r = 0;
         
+        saved_le_exception_handler = NSGetUncaughtExceptionHandler();
         NSSetUncaughtExceptionHandler(&le_exception_handler);
         
         return;
