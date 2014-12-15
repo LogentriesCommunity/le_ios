@@ -89,13 +89,13 @@
     }
 }
 
-- (void)retryTimerFired:(NSTimer*)timer
+- (void)retryTimerFired:(NSTimer* __attribute__((unused)))timer
 {
     LE_DEBUG(@"Retry timer fired");
     [self checkConnection];
 }
 
-- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
+- (void)stream:(NSStream * __attribute__((unused)))aStream handleEvent:(NSStreamEvent)eventCode
 {
     if (eventCode & NSStreamEventOpenCompleted) {
         LE_DEBUG(@"Socket event NSStreamEventOpenCompleted");
@@ -333,7 +333,7 @@
     }
 }
 
-- (void)keepaliveTimer:(NSTimer*)timer
+- (void)keepaliveTimer:(NSTimer* __attribute__((unused)))timer
 {
     // does nothing, just keeps runloop running
 }
@@ -350,7 +350,7 @@
     return opened;
 }
 
-- (void)initialize:(NSTimer*)timer
+- (void)initialize:(NSTimer* __attribute__((unused)))timer
 {
     [self.initialized lock];
     [self.initialized broadcast];
