@@ -18,7 +18,9 @@
 
 @implementation LeNetworkStatus
 
-static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void* info)
+static void ReachabilityCallback(SCNetworkReachabilityRef target __attribute__((unused)),
+                                 SCNetworkReachabilityFlags flags __attribute__((unused)),
+                                 void* info)
 {
     LeNetworkStatus* networkStatus = (__bridge LeNetworkStatus*)info;
     [networkStatus callback];

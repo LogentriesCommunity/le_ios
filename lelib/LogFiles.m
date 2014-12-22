@@ -72,11 +72,11 @@
         LogFile* logFile = [self fileWithNumber:number];
         if (!logFile) {
             
-            NSError* error = nil;
+            NSError* local_error = nil;
             NSString* path = [[[self class] logsDirectory] stringByAppendingFormat:@"/%@", filename];
-            BOOL r = [fileManager removeItemAtPath:path error:&error];
+            BOOL r = [fileManager removeItemAtPath:path error:&local_error];
             if (!r) {
-                LE_DEBUG(@"Can't remove file '%@' with error %@.", filename, error);
+                LE_DEBUG(@"Can't remove file '%@' with error %@.", filename, local_error);
             }
         }
     }
@@ -96,7 +96,7 @@
     
     // if there is more than MAXIMUM_FILE_COUNT files remove first ones and rename the rest
     NSUInteger count = [self.logFiles count];
-    NSInteger orderNumber = MAXIMUM_FILE_COUNT - count;
+    NSInteger orderNumber = MAXIMUM_FILE_COUNT - (NSInteger)count;
     if (orderNumber > 0) orderNumber = 0;
     NSUInteger index = 0;
     while (index < [self.logFiles count]) {
