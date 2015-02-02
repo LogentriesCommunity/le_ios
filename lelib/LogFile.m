@@ -23,7 +23,7 @@
 + (NSString*)filename:(NSInteger)orderNumber
 {
     NSString* number = [NSString stringWithFormat:@"%ld", (long)orderNumber];
-    NSInteger space = NAME_NUMBER_LENGTH - [number length];
+    NSInteger space = NAME_NUMBER_LENGTH - (NSInteger)[number length];
     NSMutableString* string = [NSMutableString stringWithCapacity:NAME_NUMBER_LENGTH];
     while (space > 0) {
         [string appendString:@"0"];
@@ -121,11 +121,11 @@
 
     if ([fileManager fileExistsAtPath:oldMarkPath]) {
     
-        NSError* error = nil;
-        moved = [fileManager moveItemAtPath:oldMarkPath toPath:newMarkPath error:&error];
+        NSError* local_error = nil;
+        moved = [fileManager moveItemAtPath:oldMarkPath toPath:newMarkPath error:&local_error];
     
         if (!moved) {
-            LE_DEBUG(@"Can't move file from path '%@' to path '%@' with error %@", oldMarkPath, newMarkPath, error);
+            LE_DEBUG(@"Can't move file from path '%@' to path '%@' with error %@", oldMarkPath, newMarkPath, local_error);
         }
     }
 }
@@ -185,7 +185,7 @@
     NSUInteger index = 0;
     NSUInteger length = [filename length];
     if (!length) return -1; // empty or nil  filename
-    char c = [filename characterAtIndex:index++];
+    unichar c = [filename characterAtIndex:index++];
     while (index < length && '0' <= c && c <= '9') c = [filename characterAtIndex:index++];
     
      // we need a dot fter digits
