@@ -52,7 +52,7 @@ static int open_file(const char* path)
     return 0;
 }
 
-void le_poke()
+void le_poke(void)
 {
     if (!backgroundThread) {
         backgroundThread = [LEBackgroundThread new];
@@ -81,7 +81,7 @@ static void le_exception_handler(NSException *exception)
     }
 }
 
-int le_init()
+int le_init(void)
 {
     static dispatch_once_t once;
     

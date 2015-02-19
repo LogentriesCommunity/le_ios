@@ -19,8 +19,10 @@
 
 /* Pure C API */
 
-int le_init();
+int le_init(void);
+void le_poke(void);
 void le_log(const char* message);
+void le_write_string(NSString* string);
 void le_set_token(const char* token);
 
 #endif
