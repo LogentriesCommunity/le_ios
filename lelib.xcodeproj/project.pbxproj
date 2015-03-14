@@ -52,6 +52,20 @@
 		7EEE35751AB46E7600668C3E /* LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBA0161184BDEE000AB5C9A /* LogFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EEE35761AB46E7600668C3E /* LogFiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBA0165184BDEFC00AB5C9A /* LogFiles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EEE35771AB46E7600668C3E /* lecore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B50E3DD187B4D7C007DCFE5 /* lecore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE35821AB46F5C00668C3E /* lelib-iOS-static.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EEE35811AB46F5C00668C3E /* lelib-iOS-static.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE35961AB46FA200668C3E /* LeNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1B5C71897BF5C008DD96E /* LeNetworkStatus.m */; };
+		7EEE35971AB46FA200668C3E /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB74F9184AC86F00B393BC /* LEBackgroundThread.m */; };
+		7EEE35981AB46FA200668C3E /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B08F54918436082003D813B /* LELog.m */; };
+		7EEE35991AB46FA200668C3E /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA0162184BDEE000AB5C9A /* LogFile.m */; };
+		7EEE359A1AB46FA200668C3E /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA0166184BDEFC00AB5C9A /* LogFiles.m */; };
+		7EEE359B1AB46FA200668C3E /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B50E3E1187B5097007DCFE5 /* lecore.m */; };
+		7EEE359C1AB46FB000668C3E /* LeNetworkStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE1B5C61897BF57008DD96E /* LeNetworkStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE359D1AB46FB000668C3E /* LEBackgroundThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB74FB184AC88600B393BC /* LEBackgroundThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE359E1AB46FB000668C3E /* lelib.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB806A7181D3DF1003066E5 /* lelib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE359F1AB46FB000668C3E /* LELog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B08F54818436082003D813B /* LELog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE35A01AB46FB000668C3E /* LogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBA0161184BDEE000AB5C9A /* LogFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE35A11AB46FB000668C3E /* LogFiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBA0165184BDEFC00AB5C9A /* LogFiles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EEE35A21AB46FB000668C3E /* lecore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B50E3DD187B4D7C007DCFE5 /* lecore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +142,9 @@
 		7EEE35551AB46DBF00668C3E /* lelib-iOS-dynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lelib-iOS-dynamic.h"; sourceTree = "<group>"; };
 		7EEE355B1AB46DBF00668C3E /* lelib-iOS-dynamicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lelib-iOS-dynamicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEE35611AB46DBF00668C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EEE357D1AB46F5C00668C3E /* lelib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = lelib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EEE35801AB46F5C00668C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EEE35811AB46F5C00668C3E /* lelib-iOS-static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lelib-iOS-static.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EEE355C1AB46DBF00668C3E /* lelib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EEE35791AB46F5C00668C3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +254,7 @@
 				4B08F57218436F10003D813B /* demoTests */,
 				7EEE35521AB46DBF00668C3E /* lelib-iOS-dynamic */,
 				7EEE355F1AB46DBF00668C3E /* lelib-iOS-dynamicTests */,
+				7EEE357E1AB46F5C00668C3E /* lelib-iOS-static */,
 				4BB806A1181D3DF1003066E5 /* Frameworks */,
 				4BB806A0181D3DF1003066E5 /* Products */,
 			);
@@ -243,6 +268,7 @@
 				4B08F54F18436F0F003D813B /* demo.app */,
 				7EEE35511AB46DBF00668C3E /* lelib.framework */,
 				7EEE355B1AB46DBF00668C3E /* lelib-iOS-dynamicTests.xctest */,
+				7EEE357D1AB46F5C00668C3E /* lelib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +365,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7EEE357E1AB46F5C00668C3E /* lelib-iOS-static */ = {
+			isa = PBXGroup;
+			children = (
+				7EEE35811AB46F5C00668C3E /* lelib-iOS-static.h */,
+				7EEE357F1AB46F5C00668C3E /* Supporting Files */,
+			);
+			path = "lelib-iOS-static";
+			sourceTree = "<group>";
+		};
+		7EEE357F1AB46F5C00668C3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EEE35801AB46F5C00668C3E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -354,6 +397,21 @@
 				7EEE35751AB46E7600668C3E /* LogFile.h in Headers */,
 				7EEE35761AB46E7600668C3E /* LogFiles.h in Headers */,
 				7EEE35771AB46E7600668C3E /* lecore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EEE357A1AB46F5C00668C3E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EEE35A21AB46FB000668C3E /* lecore.h in Headers */,
+				7EEE359D1AB46FB000668C3E /* LEBackgroundThread.h in Headers */,
+				7EEE359F1AB46FB000668C3E /* LELog.h in Headers */,
+				7EEE35A11AB46FB000668C3E /* LogFiles.h in Headers */,
+				7EEE359E1AB46FB000668C3E /* lelib.h in Headers */,
+				7EEE359C1AB46FB000668C3E /* LeNetworkStatus.h in Headers */,
+				7EEE35821AB46F5C00668C3E /* lelib-iOS-static.h in Headers */,
+				7EEE35A01AB46FB000668C3E /* LogFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +506,24 @@
 			productReference = 7EEE355B1AB46DBF00668C3E /* lelib-iOS-dynamicTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7EEE357C1AB46F5C00668C3E /* lelib-iOS-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EEE35901AB46F5C00668C3E /* Build configuration list for PBXNativeTarget "lelib-iOS-static" */;
+			buildPhases = (
+				7EEE35781AB46F5C00668C3E /* Sources */,
+				7EEE35791AB46F5C00668C3E /* Frameworks */,
+				7EEE357A1AB46F5C00668C3E /* Headers */,
+				7EEE357B1AB46F5C00668C3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lelib-iOS-static";
+			productName = "lelib-iOS-static";
+			productReference = 7EEE357D1AB46F5C00668C3E /* lelib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -464,6 +540,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					7EEE355A1AB46DBF00668C3E = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7EEE357C1AB46F5C00668C3E = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -486,6 +565,7 @@
 				4B08F54E18436F0F003D813B /* demo */,
 				7EEE35501AB46DBF00668C3E /* lelib-iOS-dynamic */,
 				7EEE355A1AB46DBF00668C3E /* lelib-iOS-dynamicTests */,
+				7EEE357C1AB46F5C00668C3E /* lelib-iOS-static */,
 			);
 		};
 /* End PBXProject section */
@@ -517,6 +597,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7EEE35591AB46DBF00668C3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EEE357B1AB46F5C00668C3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -581,6 +668,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EEE356A1AB46DE500668C3E /* lelibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EEE35781AB46F5C00668C3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EEE35981AB46FA200668C3E /* LELog.m in Sources */,
+				7EEE359A1AB46FA200668C3E /* LogFiles.m in Sources */,
+				7EEE35971AB46FA200668C3E /* LEBackgroundThread.m in Sources */,
+				7EEE35991AB46FA200668C3E /* LogFile.m in Sources */,
+				7EEE35961AB46FA200668C3E /* LeNetworkStatus.m in Sources */,
+				7EEE359B1AB46FA200668C3E /* lecore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,6 +1041,58 @@
 			};
 			name = Release;
 		};
+		7EEE35911AB46F5C00668C3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "lelib-iOS-static/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = lelib;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EEE35921AB46F5C00668C3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "lelib-iOS-static/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = lelib;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -993,6 +1145,14 @@
 			buildConfigurations = (
 				7EEE35661AB46DBF00668C3E /* Debug */,
 				7EEE35671AB46DBF00668C3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EEE35901AB46F5C00668C3E /* Build configuration list for PBXNativeTarget "lelib-iOS-static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EEE35911AB46F5C00668C3E /* Debug */,
+				7EEE35921AB46F5C00668C3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
