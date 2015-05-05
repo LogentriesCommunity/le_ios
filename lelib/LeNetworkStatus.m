@@ -26,9 +26,10 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target __attribute__((
     [networkStatus callback];
 }
 
-- (void)callback
+-(void)callback
 {
-    [self.delegate networkStatusDidChange:self];
+    id<LeNetworkStatusDelegete> strongDelegate = self.delegate;
+    [strongDelegate networkStatusDidChange:self];
 }
 
 - (void)start
