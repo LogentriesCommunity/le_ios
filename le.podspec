@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source_files = 'lelib/*.{h,m}'
   s.ios.deployment_target = '6.0'
   s.requires_arc = true
-  s.license = 'BSD'
+  s.license = 'MIT'
 end
