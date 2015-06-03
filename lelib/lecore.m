@@ -56,7 +56,8 @@ void le_poke(void)
 {
     if (!backgroundThread) {
         backgroundThread = [LEBackgroundThread new];
-        
+        backgroundThread.name = @"Logentries";
+                
         NSCondition* initialized = [NSCondition new];
         backgroundThread.initialized = initialized;
         
