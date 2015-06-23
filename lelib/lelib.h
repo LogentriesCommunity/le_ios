@@ -20,5 +20,5 @@
 #define LE_DEBUG(...)
 #endif
 
-#import <lelib/LELog.h>
-#import <lelib/lecore.h>
+#import "LELog.h"
+#import "lecore.h"
