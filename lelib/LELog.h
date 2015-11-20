@@ -23,6 +23,11 @@
 + (LELog*)sharedInstance;
 
 /*
+ Display all messages on TTY for debug purposes
+ */
+@property (nonatomic) BOOL debugLogs;
+
+/*
  Appends space separated token to each log message.
  */
 @property (atomic, copy) NSString* token;

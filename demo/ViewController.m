@@ -45,6 +45,7 @@
 {
     [super viewDidLoad];
     LELog* log = [LELog sharedInstance];
+    log.debugLogs = YES;
     log.token = @"f66815d1-702c-414b-8dcc-bb73de372584";
     log.logApplicationLifecycleNotifications = YES;
     
