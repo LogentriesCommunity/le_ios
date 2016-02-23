@@ -13,7 +13,7 @@
 #import "LeNetworkStatus.h"
 
 #define LOGENTRIES_HOST         @"data.logentries.com"
-#define LOGENTRIES_USE_TLS      0
+#define LOGENTRIES_USE_TLS      1
 #if LOGENTRIES_USE_TLS
 #define LOGENTRIES_PORT         443
 #else
