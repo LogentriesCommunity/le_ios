@@ -17,6 +17,7 @@ LEBackgroundThread* backgroundThread;
 
 dispatch_queue_t le_write_queue;
 char* le_token;
+bool le_debug_logs = false;
 
 static int logfile_descriptor;
 static off_t logfile_size;
@@ -25,6 +26,17 @@ static int file_order_number;
 static char buffer[MAXIMUM_LOGENTRY_SIZE];
 
 static void (*saved_le_exception_handler)(NSException *exception);
+
+void LE_DEBUG(NSString *format, ...) {
+#if DEBUG
+    if (le_debug_logs) {
+        va_list args;
+        va_start(args, format);
+        NSLogv(format, args);
+        va_end(args);
+    }
+#endif
+}
 
 /*
  Sets logfile_descriptor to -1 when fails, this means that all subsequent write attempts will fail
@@ -235,4 +247,8 @@ void le_set_token(const char* token)
     dispatch_sync(le_write_queue, ^{
         le_token = local_buffer;
     });
+}
+
+void le_set_debug_logs(bool debug) {
+    le_debug_logs = debug;
 }

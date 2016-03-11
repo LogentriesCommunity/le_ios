@@ -76,6 +76,11 @@ extern char* le_token;
     le_set_token([token cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
+- (void)setDebugLogs:(BOOL)debugLogs
+{
+    le_set_debug_logs(debugLogs);
+}
+
 - (NSString*)token
 {
     __block NSString* r = nil;
