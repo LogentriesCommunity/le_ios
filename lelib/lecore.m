@@ -131,13 +131,16 @@ int le_init(void)
         
         r = 0;
         
-        saved_le_exception_handler = NSGetUncaughtExceptionHandler();
-        NSSetUncaughtExceptionHandler(&le_exception_handler);
-        
         return;
     });
     
     return r;
+}
+
+void le_handle_crashes(void)
+{
+    saved_le_exception_handler = NSGetUncaughtExceptionHandler();
+    NSSetUncaughtExceptionHandler(&le_exception_handler);
 }
 
 /*
