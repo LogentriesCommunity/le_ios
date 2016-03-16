@@ -22,6 +22,7 @@ extern void LE_DEBUG(NSString *format, ...);
 /* Pure C API */
 
 int le_init(void);
+void le_handle_crashes(void);
 void le_poke(void);
 void le_log(const char* message);
 void le_write_string(NSString* string);
