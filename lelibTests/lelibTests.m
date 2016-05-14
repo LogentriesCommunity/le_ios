@@ -39,5 +39,12 @@
     
     XCTFail(@"Test exited runloop");
 }
+- (void)testNilToken{
+    
+    LELog* log = [LELog sharedInstance];
+    log.token = nil;
+    [log log:@"try to log without token"];
+
+}
 
 @end
