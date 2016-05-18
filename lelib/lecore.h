@@ -27,6 +27,7 @@ void le_poke(void);
 void le_log(const char* message);
 void le_write_string(NSString* string);
 void le_set_token(const char* token);
+bool is_valid_token(const char* token,size_t *token_length);
 void le_set_debug_logs(bool verbose);
 
 #endif
