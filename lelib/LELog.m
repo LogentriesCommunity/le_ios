@@ -61,6 +61,10 @@ extern char* le_token;
     le_poke();
 }
 
++ (void)log:(NSObject *)object{
+    
+    [[self sharedInstance] log:object];
+}
 + (LELog*)sharedInstance
 {
     static dispatch_once_t once;
@@ -70,7 +74,12 @@ extern char* le_token;
     });
     return sharedInstance;
 }
-
++(LELog*)sessionWithToken:(NSString*)token{
+    
+    LELog * leLog = [self sharedInstance];
+    [leLog setToken:token];
+    return leLog;
+}
 - (void)setToken:(NSString *)token
 {
     le_set_token([token cStringUsingEncoding:NSUTF8StringEncoding]);

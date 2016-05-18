@@ -32,6 +32,32 @@ log.token = @"LOGENTRIES_TOKEN";
 [log log:@"Hello World"];
 ```
 
+Or with the class methods
+--------------
+
+```objectivec
+#import "lelib.h"
+
+[LELog sessionWithToken:@"LOGENTRIES_TOKEN"];
+
+[LELog log:@"Hello World"];
+```
+
+Log easy around your classes
+--------------
+
+Add to your .pch 
+```objectivec
+#import "lelib.h"
+```
+and call from your classes
+```objectivec
+
+[LELog log:@"Hello World"];
+
+```
+
+
 Early initialization
 --------------------
 
