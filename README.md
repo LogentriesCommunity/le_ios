@@ -88,7 +88,18 @@ of LELog instance later.
 
 Disable Console Logger
 ----------------------
-To disable the logger from logging to the console set `LE_DEBUG_LOGS` to 0 in lelib.h.
+To disable the logger from logging to the console set `debugLogs` to `false`:
+
+#### Objective-c
+```objectivec
+[log setDebugLogs:false];
+```
+
+#### Swift
+```swift
+log.debugLogs = false
+```
+
 
 Quick questions
 ---------------
