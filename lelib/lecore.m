@@ -229,6 +229,7 @@ void le_write_string(NSString* string)
         NSUInteger totalLength = token_length + 1 + usedLength;
         buffer[totalLength++] = '\n';
         write_buffer((size_t)totalLength);
+        le_poke();
     });
 }
 
