@@ -57,7 +57,7 @@
     self.outputSocketStream = (__bridge_transfer NSOutputStream *)writeStream;
     
 #if LOGENTRIES_USE_TLS
-    [self.outputSocketStream setProperty:(__bridge id)kCFStreamSocketSecurityLevelNegotiatedSSL
+    [self.outputSocketStream setProperty:(__bridge id)kCFStreamSocketSecurityLevelTLSv1
                                   forKey:(__bridge id)kCFStreamPropertySocketSecurityLevel];
 #endif
     
