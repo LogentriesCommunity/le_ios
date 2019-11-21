@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version = '1.2'
   s.summary = 'Logentries logging for iOS'
   s.homepage = 'https://github.com/logentries/le_ios'
-  s.author = { 'Logentries' => 'support@logentries.com' }
+  s.author = { 'Rapid7' => 'InsightOpsTeam@rapid7.com' }
   s.source = { :git => 'https://github.com/logentries/le_ios.git', :tag => "#{s.version}" }
   s.source_files = 'lelib/*.{h,m}'
   s.ios.deployment_target = '6.0'

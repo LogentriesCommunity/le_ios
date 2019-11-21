@@ -3,7 +3,6 @@ Logentries logging for iOS
 ==========================
 
 This plugin is no longer officially supported or maintained by Logentries.
-If you would be interested in maintaining this project, please contact support@logentries.com.
 
 
 Main features
