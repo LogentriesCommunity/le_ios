@@ -23,6 +23,8 @@
 + (LELog*)sharedInstance;
 
 + (LELog*)sessionWithToken:(NSString*)token;
+
++ (void)handleCrashes;
 /*
  Display all messages on TTY for debug purposes
  */

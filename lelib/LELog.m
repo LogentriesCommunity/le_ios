@@ -30,6 +30,7 @@ extern char* le_token;
     [center addObserver:self selector:@selector(notificationReceived:) name:UIApplicationWillEnterForegroundNotification object:nil];
 
     le_poke();
+    le_handle_crashes();
 
     return self;
 }
@@ -80,6 +81,11 @@ extern char* le_token;
     [leLog setToken:token];
     return leLog;
 }
+
++ (void)handleCrashes {
+    le_handle_crashes();
+}
+
 - (void)setToken:(NSString *)token
 {
     le_set_token([token cStringUsingEncoding:NSUTF8StringEncoding]);
